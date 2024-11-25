@@ -1,0 +1,208 @@
+import turtle
+
+# Set up screen
+screen = turtle.Screen()
+screen.bgcolor("lightblue")
+
+# Create turtle object
+t = turtle.Turtle()
+t.shape("turtle")
+t.speed(10)
+
+# 1. Move forward
+t.forward(100)
+
+# 2. Move backward
+t.backward(50)
+
+# 3. Turn right
+t.right(90)
+
+# 4. Turn left
+t.left(90)
+
+# 5. Pen up (no drawing)
+t.penup()
+
+# 6. Pen down (start drawing)
+t.pendown()
+
+# 7. Change pen color
+t.pencolor("red")
+
+# 8. Change fill color
+t.fillcolor("yellow")
+
+# 9. Start filling shape
+t.begin_fill()
+
+# 10. Draw a square
+for _ in range(4):
+    t.forward(100)
+    t.left(90)
+
+# 11. Stop filling shape
+t.end_fill()
+
+# 12. Change pen size
+t.pensize(5)
+
+# 13. Draw a circle
+t.circle(50)
+
+# 14. Set turtle color
+t.color("green")
+
+# 15. Draw a triangle
+for _ in range(3):
+    t.forward(100)
+    t.left(120)
+
+# 16. Draw an arc
+t.circle(50, 180)
+
+# 17. Set turtle speed
+t.speed(3)
+
+# 18. Hide the turtle
+t.hideturtle()
+
+# 19. Show the turtle
+t.showturtle()
+
+# 20. Change background color
+screen.bgcolor("lightgreen")
+
+# 21. Set position
+t.setpos(0, 0)
+
+# 22. Move turtle to a specific coordinate
+t.goto(200, 100)
+
+# 23. Draw a hexagon
+for _ in range(6):
+    t.forward(60)
+    t.left(60)
+
+# 24. Draw an octagon
+for _ in range(8):
+    t.forward(60)
+    t.left(45)
+
+# 25. Move turtle without drawing
+t.penup()
+t.goto(-100, -100)
+t.pendown()
+
+# 26. Draw a rectangle
+for _ in range(2):
+    t.forward(200)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+
+# 27. Draw a spiral
+for i in range(100):
+    t.forward(i * 10)
+    t.left(45)
+
+# 28. Set screen title
+screen.title("Turtle Operations Demo")
+
+# 29. Set window size
+screen.setup(width=600, height=600)
+
+# 30. Move turtle to center
+t.setposition(0, 0)
+
+# 31. Draw a star
+for _ in range(5):
+    t.forward(100)
+    t.right(144)
+
+# 32. Change pen color to random
+import random
+colors = ["red", "green", "blue", "yellow", "orange"]
+t.pencolor(random.choice(colors))
+
+# 33. Draw concentric circles
+for radius in range(10, 100, 10):
+    t.penup()
+    t.goto(0, -radius)
+    t.pendown()
+    t.circle(radius)
+
+# 34. Draw a polygon
+sides = 7
+length = 70
+angle = 360 / sides
+for _ in range(sides):
+    t.forward(length)
+    t.left(angle)
+
+# 35. Set angle using degrees
+t.setheading(90)
+
+# 36. Draw a dashed line
+for _ in range(10):
+    t.forward(10)
+    t.penup()
+    t.forward(10)
+    t.pendown()
+
+# 37. Change shape to square
+t.shape("square")
+
+# 38. Change shape to triangle
+t.shape("triangle")
+
+# 39. Change turtle speed (fastest)
+t.speed(0)
+
+# 40. Draw a curve
+for _ in range(180):
+    t.forward(1)
+    t.left(1)
+
+# 41. Draw a flower-like shape
+for _ in range(36):
+    t.forward(100)
+    t.left(170)
+
+# 42. Set the turtle's position
+t.setposition(100, 200)
+
+# 43. Move the turtle to a random position
+t.penup()
+t.setposition(random.randint(-200, 200), random.randint(-200, 200))
+t.pendown()
+
+# 44. Set the turtle's heading (direction)
+t.setheading(180)
+
+# 45. Draw a spiral with varying colors
+for i in range(50):
+    t.pencolor(random.choice(colors))
+    t.forward(i * 10)
+    t.left(45)
+
+# 46. Move turtle to the center without drawing
+t.penup()
+t.goto(0, 0)
+
+# 47. Clear the screen
+t.clear()
+
+# 48. Reset the turtle to its original state
+t.reset()
+
+# 49. Set turtle's transparency (alpha)
+t.color("blue", "green")  # (border color, fill color)
+
+# 50. Draw a filled circle
+t.begin_fill()
+t.circle(50)
+t.end_fill()
+
+# Finish the drawing
+turtle.done()
